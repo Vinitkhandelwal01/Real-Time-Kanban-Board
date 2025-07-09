@@ -99,7 +99,7 @@ function AppRoutes() {
       loadUsers();
     }
 
-    const socket = io('http://localhost:4000');
+    const socket = io(process.env.REACT_APP_SOCKET_URL);
     socket.on('taskUpdated', ({ type, task }) => {
       setTasks(prev => {
         if (type === 'create') {
