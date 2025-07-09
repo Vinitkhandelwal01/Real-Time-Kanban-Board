@@ -92,6 +92,6 @@ The frontend then opens a Conflict Modal, allowing the user to:
     Real-time updates with multiple tabs
     Conflict resolution modal
 ## Logic Document
- Logic_Document.md — Contains detailed explanations of:
-  Smart Assign algorithm
-  Conflict resolution mechanism
+  [Logic_Document.md](https://github.com/Vinitkhandelwal01/Real-Time-Kanban-Board/blob/main/Logic_Document.md) — Contains detailed explanations of:
+    Smart Assign algorithm
+    Conflict resolution mechanism
