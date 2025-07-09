@@ -80,10 +80,10 @@ The frontend then opens a Conflict Modal, allowing the user to:
   This ensures collaborative safety without losing data.
 
 ## Deployed Live App
-  Frontend (Vercel): https://your-kanban-frontend.vercel.app
-  Backend (Render): https://your-kanban-backend.onrender.com
+  Frontend (Vercel): https://real-time-kanban-board-two.vercel.app/
+  Backend (Render): https://real-time-kanban-board.onrender.com
 ## Demo Video
-  Watch the 5–10 min demo video here
+  
     This video demonstrates:
     Registering and logging in
     Task creation and updates
