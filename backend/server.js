@@ -6,17 +6,30 @@ require('dotenv').config();
 const app = express();
 const http = require('http').createServer(app);
 const { Server } = require('socket.io');
+const allowedOrigins = [
+  'http://localhost:3000',
+  'https://real-time-kanban-board-two.vercel.app' 
+];
+
+// Apply CORS middleware
+app.use(cors({
+  origin: allowedOrigins,
+  credentials: true
+}));
+
 const io = new Server(http, {
   cors: {
-    origin: '*',
+    origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  },
+    credentials: true
+  }
 });
 
-app.use(cors());
+
+// app.use(cors());
 app.use(express.json());
 
-app.set('io', io); // Make io accessible in routes
+app.set('io', io); 
 
 app.get('/', (req, res) => {
   res.send('API is running');
