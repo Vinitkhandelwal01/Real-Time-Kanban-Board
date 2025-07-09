@@ -1,0 +1,97 @@
+/* Modern KanbanBoard Styles */
+.kanban-board-layout {
+  width: 100%;
+  min-height: 100vh;
+  background: #f7faff;
+  padding: 2.5rem 0.5rem 1.5rem 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.kanban-board {
+  display: flex;
+  gap: 2.2rem;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: center;
+  margin-bottom: 2rem;
+  overflow-x: auto;
+}
+.kanban-column {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 12px rgba(60, 60, 120, 0.08);
+  padding: 1.2rem 1rem 1.5rem 1rem;
+  min-width: 290px;
+  max-width: 340px;
+  flex: 1 1 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+.kanban-column.drag-over {
+  box-shadow: 0 4px 20px rgba(60, 60, 120, 0.16);
+  transform: translateY(-2px) scale(1.01);
+}
+.kanban-column h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #4a69bd;
+  margin-bottom: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.kanban-tasks {
+  width: 100%;
+  min-height: 60px;
+}
+.kanban-task.placeholder {
+  color: #aaa;
+  font-style: italic;
+  text-align: center;
+  padding: 1.2rem 0;
+}
+@media (max-width: 1000px) {
+  .kanban-board {
+    gap: 1.2rem;
+    max-width: 100vw;
+  }
+  .kanban-column {
+    min-width: 220px;
+    max-width: 270px;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+  }
+}
+@media (max-width: 700px) {
+  .kanban-board-layout {
+    padding: 1.2rem 0.2rem 0.7rem 0.2rem;
+  }
+  .kanban-board {
+    gap: 0.7rem;
+    max-width: 100vw;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+  }
+  .kanban-column {
+    min-width: 170px;
+    max-width: 210px;
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+  }
+  .kanban-column h2 {
+    font-size: 1.05rem;
+    margin-bottom: 0.7rem;
+  }
+}
+@media (max-width: 420px) {
+  .kanban-board {
+    gap: 0.3rem;
+  }
+  .kanban-column {
+    min-width: 120px;
+    max-width: 150px;
+    padding: 0.4rem 0.1rem 0.4rem 0.1rem;
+  }
+  .kanban-column h2 {
+    font-size: 0.92rem;
+  }
+} 

@@ -1,0 +1,137 @@
+/* Modern ConflictModal Styles */
+.conflict-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(60, 60, 120, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.conflict-modal {
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 32px rgba(60, 60, 120, 0.18);
+  padding: 2.2rem 2.2rem 1.5rem 2.2rem;
+  min-width: 320px;
+  max-width: 95vw;
+  width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Segoe UI', 'Roboto', 'Arial', sans-serif;
+}
+.conflict-modal-header h2 {
+  color: #e67e22;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+.conflict-modal-header p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 1.2rem;
+}
+.conflict-comparison.field-merge {
+  width: 100%;
+  margin-bottom: 1.2rem;
+}
+.conflict-field-row {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+.conflict-field-label {
+  min-width: 90px;
+  font-weight: 600;
+  color: #4a69bd;
+  font-size: 1rem;
+}
+.conflict-field-option {
+  background: #f7faff;
+  border-radius: 8px;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.2s, background 0.2s;
+  font-size: 0.98rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+.conflict-field-option.selected {
+  border: 2px solid #4a69bd;
+  background: #e3eafe;
+}
+.conflict-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.2rem;
+  width: 100%;
+  justify-content: center;
+}
+.conflict-btn {
+  border: none;
+  border-radius: 8px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: #e3eafe;
+  color: #4a69bd;
+  box-shadow: 0 1px 4px rgba(60, 60, 120, 0.07);
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.conflict-btn.merge-btn {
+  background: #e0ffe7;
+  color: #27ae60;
+}
+.conflict-btn.merge-btn:hover {
+  background: #27ae60;
+  color: #fff;
+}
+.conflict-btn.overwrite-btn {
+  background: #fff7e0;
+  color: #f1c40f;
+}
+.conflict-btn.overwrite-btn:hover {
+  background: #f1c40f;
+  color: #fff;
+}
+.conflict-btn.cancel-btn {
+  background: #ffe0e0;
+  color: #e74c3c;
+}
+.conflict-btn.cancel-btn:hover {
+  background: #e74c3c;
+  color: #fff;
+}
+@media (max-width: 700px) {
+  .conflict-modal {
+    padding: 1.2rem 0.7rem 1rem 0.7rem;
+    min-width: 180px;
+    width: 98vw;
+  }
+  .conflict-modal-header h2 {
+    font-size: 1.05rem;
+  }
+  .conflict-field-label {
+    font-size: 0.95rem;
+  }
+  .conflict-btn {
+    font-size: 0.98rem;
+    padding: 0.4rem 0.7rem;
+  }
+}
+@media (max-width: 420px) {
+  .conflict-modal {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem;
+    min-width: 80px;
+    width: 100vw;
+  }
+  .conflict-modal-header h2 {
+    font-size: 0.92rem;
+  }
+} 
