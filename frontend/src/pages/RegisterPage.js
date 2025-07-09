@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './AuthForm.css';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-
+const API_BASE_URL = process.env.REACT_APP_API_BASE_URL;
 const EyeIcon = ({ open }) => open ? <FiEye size={20} /> : <FiEyeOff size={20} />;
 
 const RegisterPage = ({ onSwitch, onRegister }) => {
@@ -26,7 +26,7 @@ const RegisterPage = ({ onSwitch, onRegister }) => {
       return;
     }
     try {
-      const res = await fetch('/api/auth/register', {
+      const res = await fetch(`${API_BASE_URL}/auth/register`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ userName: form.userName, email: form.email, password: form.password, confirmPassword:form.confirmPassword})
